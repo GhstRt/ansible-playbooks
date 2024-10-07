@@ -5,7 +5,7 @@
   gather_facts: true
  
   tasks:
-    - include_vars: vars4user.yaml
+    - include_vars: vars4user
     - name: user password is updated
       user:
         name: "{{ user }}"
