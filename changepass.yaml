@@ -1,7 +1,8 @@
 ---
 - name: Update user password on multiple servers
   hosts: all  #
-  become: yes  
+  become: yes 
+  gather_facts: true
  
   tasks:
     - include_vars: vars4user.yaml
