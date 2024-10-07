@@ -1,0 +1,12 @@
+---
+- name: Update user password on multiple servers
+  hosts: all  #
+  become: yes  
+ 
+  tasks:
+    - include_vars: vars4user.yaml
+    - name: user password is updated
+      user:
+        name: "{{ username }}"
+        password: "{{ new_password | password_hash('sha512') }}"
+        update_password: always   
