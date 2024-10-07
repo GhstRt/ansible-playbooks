@@ -7,6 +7,6 @@
     - include_vars: vars4user.yaml
     - name: user password is updated
       user:
-        name: "{{ username }}"
+        name: "{{ user }}"
         password: "{{ new_password | password_hash('sha512') }}"
         update_password: always   
